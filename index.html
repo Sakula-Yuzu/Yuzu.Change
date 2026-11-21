@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>个性文字生成工具</title>
+    <meta
+      name="description"
+      content="在线个性文字生成工具，把英文网名昵称转成花体、粗体、哥特和符号样式，点击即可复制。"
+    />
+    <meta name="theme-color" content="#137a34" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bar"></div>
+    <div class="wrap">
+      <section class="panel">
+        <header class="site">
+          <h1>个性文字生成工具</h1>
+          <p class="sub">点击下面文字直接复制</p>
+        </header>
+
+        <div class="pad">
+          <p class="label" id="style-label">当前样式</p>
+          <button type="button" class="result" id="result"></button>
+          <p class="hint" id="meta"></p>
+        </div>
+
+        <div class="pad">
+          <div class="row-between">
+            <p class="label" style="padding-bottom: 0">请输入要转换的字母</p>
+            <p class="count" id="count">4/100</p>
+          </div>
+          <textarea
+            id="input"
+            class="field"
+            rows="3"
+            maxlength="100"
+            spellcheck="false"
+            autocapitalize="off"
+            autocorrect="off"
+            placeholder="LOVE"
+            aria-label="请输入要转换的字母"
+          ></textarea>
+          <div class="cases">
+            <button type="button" class="case" id="upper">转大写</button>
+            <button type="button" class="case" id="lower">转小写</button>
+          </div>
+        </div>
+
+        <div class="actions pad">
+          <button type="button" class="action solid" id="copy">复制</button>
+          <button type="button" class="action" id="clear">清空</button>
+          <button type="button" class="action" id="blank">空白昵称</button>
+        </div>
+      </section>
+
+      <section class="tools">
+        <div class="pad">
+          <p class="label">请选择要制作的样式</p>
+          <input id="search" class="search" type="search" placeholder="搜索样式，例如花体、哥特" aria-label="搜索样式" />
+          <div class="chips" id="chips"></div>
+        </div>
+        <div class="list" id="list"></div>
+        <div class="alpha">
+          <p class="label" style="padding-top: 0">当前样式字母表</p>
+          <p class="fancy" id="alpha-upper"></p>
+          <p class="fancy" id="alpha-lower"></p>
+          <p class="note">
+            这些是 Unicode 字符，不是安装字体。复制后换到别的 App，花体还会留着。经典 11
+            种与常见花体昵称一致，输入时会即时转换。
+          </p>
+        </div>
+      </section>
+    </div>
+    <div class="sr" id="live" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
