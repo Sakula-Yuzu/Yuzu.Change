@@ -2,7 +2,7 @@
   var UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var LOWER = "abcdefghijklmnopqrstuvwxyz";
   var MAX = 100;
-  var SAMPLE = "LOVE";
+  var SAMPLE = "SakulaYuzu";
   var STORAGE_KEY = "fancy-font-tool";
   var HANGUL_FILLER = "\u3164";
   var BLANK_NICK = HANGUL_FILLER + HANGUL_FILLER + HANGUL_FILLER + HANGUL_FILLER + HANGUL_FILLER + HANGUL_FILLER + HANGUL_FILLER + HANGUL_FILLER;
@@ -209,8 +209,8 @@
       result.classList.add("empty");
     }
     document.getElementById("meta").textContent = state.text.length > 0
-      ? "输出 " + Array.from(output).length + " 个字符，可粘贴到微信、QQ 和游戏昵称"
-      : "只转换英文字母，数字和中文会原样保留";
+      ? "输出 " + Array.from(output).length + " 个字符，可粘贴到其他App"
+      : "当前只能转换英文字母，数字和中文无法转换";
     document.getElementById("count").textContent = state.text.length + "/" + MAX;
     var input = document.getElementById("input");
     if (input.value !== state.text) input.value = state.text;
